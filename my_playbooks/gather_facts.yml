@@ -1,0 +1,10 @@
+---
+ - name: Finding OS distribution and OS name
+   hosts: all
+   gather_facts: true
+   tasks:
+   - debug:
+      msg:
+       - "The OS distribution is: {{ansible_distribution}}"
+       - "The OS name is: {{ansible_system}}"
+       - "The OS family is: {{ansible_os_family}}"
